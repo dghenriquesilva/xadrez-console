@@ -14,11 +14,15 @@ namespace xadrez_console
                 tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
                 tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 2));
                 Tela.imprimirTabuleiro(tab);
+
+                PosicaoXadrez pos = new PosicaoXadrez('c', 3);
+                Console.WriteLine(pos.toPosicao());
                 Console.ReadLine();
             }
             catch(TabuleiroException ex)
             {
                 Console.WriteLine(ex.Message);
+                
             }
         }
     }
